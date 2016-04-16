@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20160416183300) do
     t.string   "hours"
     t.string   "password_digest"
   end
->>>>>>> e596426647d04794fac206355fb8f9b67265df7d
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
