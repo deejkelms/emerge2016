@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   include SessionsHelper
-  helper_method :current_artist
-  helper_method :current_fan
+  helper_method :current_user
+  helper_method :current_bar
 
   def current_bar
     @current_fan ||= Bar.find_by(id: session[:bar_id])

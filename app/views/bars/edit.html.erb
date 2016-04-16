@@ -1,6 +1,35 @@
-<h1>Edit Your Bar</h1>
+<% provide(:title, 'Edit') %>
+<h1>Edit Info</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@bar) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
 
-<%= link_to 'Show', @bar %> |
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+      
+      <%= f.label :twitter %>
+      <%= f.text_field :twitter %>
+      
+      <%= f.label :website %>
+      <%= f.text_field :website %>
+      
+      <%= f.label :hours %>
+      <%= f.text_field :hours %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Submit Update", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
 <%= link_to 'Back', bars_path %>
