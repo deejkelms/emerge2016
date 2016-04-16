@@ -5,11 +5,11 @@ class SessionsController < ApplicationController
 
   def create
    @bar = Bar.
-                 find_by(email: params[:email])
+                 find_by(email: params[:session][:email].downcase)
                  try(:authenticate, params[:password])
 
    @user= User.
-                 find_by(email: params[:email])
+                 find_by(email: params[:session][:email].downcase)
                  try(:authenticate, params[:password])
      if @user
        session[:user_id] = @user.id
@@ -26,11 +26,11 @@ class SessionsController < ApplicationController
        render action: 'new'
      end
   end
-  
+
    def destroy
      session[:user_id] = nil
      session[:bar_id] = nil
      redirect_to login_path
    end
-    
+
 end
