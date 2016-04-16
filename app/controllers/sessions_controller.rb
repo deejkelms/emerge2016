@@ -13,22 +13,24 @@ class SessionsController < ApplicationController
                  try(:authenticate, params[:password])
      if @user
        session[:user_id] = @user.id
-       redirect_to current_user
+       log_in user
+       redirect_to user
 
      elsif @bar
          session[:bar_id] = @bar.id
-         redirect_to current_bar
+         log_in bar
+         redirect_to bar
 
      else
        flash.now[:danger] = 'Invalid email/password combination'
        render action: 'new'
      end
   end
-  
+
    def destroy
      session[:user_id] = nil
      session[:bar_id] = nil
      redirect_to login_path
    end
-    
+
 end
