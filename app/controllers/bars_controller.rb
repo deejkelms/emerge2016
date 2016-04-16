@@ -10,6 +10,7 @@ class BarsController < ApplicationController
   # GET /bars/1
   # GET /bars/1.json
   def show
+    @bar = Bar.find(params[:id])
   end
 
   # GET /bars/new
@@ -23,6 +24,8 @@ class BarsController < ApplicationController
 
   # POST /bars
   # POST /bars.json
+
+
   def create
     @bar = Bar.new(bar_params)
 
@@ -70,5 +73,16 @@ class BarsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def bar_params
       params.fetch(:bar, {})
+    
+    end
+    
+    def bar_params
+      params.require(:bar).permit(:name, :email, :password, :password_confirmation)
     end
 end
+
+  # def bar_params
+  #   params.
+  #   require(:bar).
+  #   permit(:name, :email, :address, :twitter, :website, :hours, :password, :password_confirmation)
+  # end
