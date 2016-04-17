@@ -15,37 +15,6 @@
 </div>
 
 
-
-
-</div>
-
-
-  <%= @bar.address %>
-  <%= @bar.email %>
-  <%= @bar.hours %>
-  <%= @bar.twitter %>
-  <ul>
-  <%@tweets.each do |tweet|%>
-    <li>  
-      <img src="<%=tweet.user.profile_image_url%>">
-      <%= tweet.text %>
-    </li>
-    
-    <%end%>
-    </ul>
-
-  
-<% if logged_in? %>
-<%=link_to 'Logout' %>
-<% end %>
-
-<% if current_bar %>  
-
-
-
-
-<!-- <p id="notice"><%= notice %></p> -->
-
 <% provide(:title, @bar.name) %>
 
 <div class="container heading">
@@ -83,18 +52,9 @@
 </table>
 
 
-
-
-
-
-
-
-
-
-
 <% if current_bar %>
 
   <%= link_to 'Edit', edit_bar_path(@bar) %> |
 <% end %>
 
-<%= link_to 'Back', bars_path %>
+<%# link_to 'Back' %>
