@@ -17,6 +17,10 @@
 
 <p id="notice"><%= notice %></p>
 
+<<<<<<< HEAD
+=======
+<h1>Local Bars</h1>
+>>>>>>> 3c544b1fd476356a0d6d02163e27c7bda8e77115
 
 <div class="wrapper">
   <!-- Simple header with fixed tabs. -->
@@ -167,9 +171,12 @@
   <tbody>
     <% @bars.each do |bar| %>
       <tr>
+        <td><%= bar.name %></td>
         <td><%= link_to 'Show', bar %></td>
+      <% if @current_bar %>
         <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
         <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
