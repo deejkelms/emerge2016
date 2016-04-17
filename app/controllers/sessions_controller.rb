@@ -12,11 +12,13 @@ class SessionsController < ApplicationController
                  find_by(email: params[:session][:email].downcase)
                  try(:authenticate, params[:password])
      if @user
+       user = User.omniauth(env['omniauth.auth'])
        session[:user_id] = @user.id
        log_in @user
        redirect_to @user
 
      elsif @bar
+        bar = Bar.omniauth(env['omniauth.auth'])
          session[:bar_id] = @bar.id
          log_in @bar
          redirect_to @bar
