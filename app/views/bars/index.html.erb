@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bars</h1>
+<h1>Local Bars</h1>
 
 <table>
   <thead>
@@ -12,9 +12,12 @@
   <tbody>
     <% @bars.each do |bar| %>
       <tr>
+        <td><%= bar.name %></td>
         <td><%= link_to 'Show', bar %></td>
+      <% if @current_bar %>
         <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
         <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
