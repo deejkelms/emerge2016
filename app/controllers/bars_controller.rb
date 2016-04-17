@@ -16,7 +16,7 @@ class BarsController < ApplicationController
     end
     
     @bar = Bar.find(params[:id])
-    @tweets = client.user_timeline(@bar.twitter)
+    @tweets = client.user_timeline(@bar.twitter, count:5)
     @current_profile = params[:id]
   end
 
