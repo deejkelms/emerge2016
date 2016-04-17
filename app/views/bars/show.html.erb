@@ -16,8 +16,44 @@
 </div>
 
 
+<% provide(:title, @bar.name) %>
 
+<div class="container heading">
+  <div class= "row" >
+    <div class="col-xs-4">
+      <center><h4> Address </h4></center>
+    </div>
+    <div class="col-xs-4">
+      <center><h4> Email </h4></center>
+    </div>
+    <div class="col-xs-4">
+      <center><h4> Hours </h4></center>
+    </div>
+    <div class="col-xs-4">
+      <center><%= @bar.address %></center>
+    </div>
+    <div class="col-xs-4">
+      <center><%= @bar.email %></center>
+    </div>
+    <div class="col-xs-4">
+      <center><%= @bar.hours %></center>
+    </div>
+  </div>
+</div>
+
+<!-- On rows -->
+<table class="table borderless">
+  <%@tweets.each do |tweet|%>
+<!-- On cells (`td` or `th`) -->
+<tr>
+  <th class="default"><img src="<%=tweet.user.profile_image_url%>"></th>
+  <td class="default"><p class="tweet"><%= tweet.text %></p></td>
+</tr>
+  <%end%>
+</table>
+
+
+<% if current_bar %>
 
   <%= link_to 'Edit', edit_bar_path(@bar) %> |
-  <%= link_to 'Back', bars_path %>
-</div>
+<% end %>
