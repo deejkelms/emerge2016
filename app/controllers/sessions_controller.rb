@@ -14,13 +14,13 @@ class SessionsController < ApplicationController
      if @bar
        session[:bar_id] = @bar.id
        puts 'bar'
-       redirect_to current_bar
+       redirect_to @current_bar
 
 
      elsif @user
          session[:user_id] = @user.id
          puts 'user'
-         redirect_to current_user
+         redirect_to bars_path
 
      else
        flash.now[:danger] = 'Invalid email/password combination'

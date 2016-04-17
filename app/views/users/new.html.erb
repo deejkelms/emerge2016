@@ -1,5 +1,55 @@
-<h1>New User</h1>
 
-<%= render 'form' %>
+<head><!-- Simple MDL Progress Bar -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
 
-<%= link_to 'Back', users_path %>
+<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<% provide(:title, 'Sign up') %>
+<center><h1 class = "testfont">Sign up</h1></center>
+
+<div class = "container signup_box">
+  <div class="row">
+   <div class="col-xs-4 testfont">
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name %>
+   </div>
+   <div class="col-xs-5">
+      <%= f.text_field :name %>
+   </div>
+
+   <div class="col-xs-4 testfont">
+    <%= f.label :email %>
+   </div>
+
+   <div class="col-xs-5">
+       <%= f.email_field :email %>
+   </div>
+
+
+   <div class="col-xs-4 testfont">
+    <%= f.label :password %>
+   </div>
+
+   <div class="col-xs-5">
+       <%= f.password_field :password %>
+   </div>
+
+   <div class="col-xs-4 testfont">
+    <%= f.label :password_confirmation, "Confirmation" %>
+   </div>
+
+   <div class="col-xs-5">
+       <%= f.password_field :password_confirmation %>
+   </div>
+
+   <div class="col-xs-12">
+      <center><%= f.submit "Create Account", class: "mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored" %></center>
+   </div>
+
+    <% end %>
+   </div>
+  </div>
+</div>
