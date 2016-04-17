@@ -1,10 +1,14 @@
 <!doctype html>
 <html>
+<<<<<<< HEAD
   <head>  
+=======
+  <head>
+>>>>>>> e21c5e3da2b1de2bfc1818f3b3944bd0ced67602
 
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
-      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>  
+      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
        <!-- Bootstrap -->
         <!-- Latest compiled and minified CSS -->
@@ -63,6 +67,82 @@
             </div>
           <center><p class="testfont"> load more </p></center></div>
 
+<<<<<<< HEAD
+=======
+      <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+        <div class="page-content"><!-- Your content goes here --></div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+        <div class="page-content"><!-- Your content goes here --></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+
+</br>
+
+            <center><p class="testfont"> load more </p></center></div>
+      </section>
+
+
+</br>
+</br>
+=======
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+       <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  </head>
+
+<nav>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#">Bars Near Me</a></li>
+    <li role="presentation"><a href="#">Recent Activity</a></li>
+    <li role="presentation"><a href="#">Favorites</a></li>
+  </ul>
+<nav>
+
+
+
+
+
+
+<center><p class="testfont"> load more </p></center>
+
+
+
+>>>>>>> master
+<div>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bars.each do |bar| %>
+      <tr>
+        <td><%= bar.name %></td>
+        <td><%= link_to 'Show', bar %></td>
+      <% if @current_bar %>
+        <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
+        <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+>>>>>>> e21c5e3da2b1de2bfc1818f3b3944bd0ced67602
 
 
 

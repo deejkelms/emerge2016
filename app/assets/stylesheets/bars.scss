@@ -6,15 +6,26 @@
 
 .testfont{
   font-family: 'Gentium Book Basic', serif;
+<<<<<<< HEAD
 
+=======
+  padding-left: 20px;
+}
+
+p.notice{
+  margin-bottom:0 !important;
+>>>>>>> e21c5e3da2b1de2bfc1818f3b3944bd0ced67602
 }
 
 p.testfont {
-  margin-top:15px;
   text-transform:uppercase;
   letter-spacing:1px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e21c5e3da2b1de2bfc1818f3b3944bd0ced67602
 .mdl-layout__tab{
   font-family:'Gentium Book Basic', serif;
   text-transform:none;
@@ -36,6 +47,10 @@ h4 {
 .signup_box {
   background-color: #f2f2f2;
   padding:20px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e21c5e3da2b1de2bfc1818f3b3944bd0ced67602
 }
 
 .btn.btn-primary{
@@ -50,12 +65,35 @@ h4 {
 
 /*SHOW PAGE*/
 .banner{
- background-color:teal;
+ background-image:url("cuba.jpeg");
+ background-size:cover;
  height:200px;
  width:100%;
  margin-top:-25px;
 }
 
+.filler{
+  background-color:#00c3dd;
+}
+
+table{
+  border:1px solid #ccc;
+}
+
+.borderless td, .borderless th {
+    border: none !important;;
+}
+
+.heading{
+margin-left: 0 !important;
+margin-right: 0 !important;
+background-color: #00c3dd;
+padding-left:0 !important;
+padding-right:0 !important;
+width:100% !important;;
+padding-bottom:20px;
+
+}
 .testfont_title{
   background-color:white;
   border:3px solid #ccc;
@@ -88,6 +126,10 @@ div>p.name{
   opacity:.5;
   color:white;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e21c5e3da2b1de2bfc1818f3b3944bd0ced67602
 
 .secondBar {
   height:150px;
@@ -124,5 +166,3 @@ div>p.name{
   padding-right:1px !important;
   margin-top:2px !important;
 }
-
-
