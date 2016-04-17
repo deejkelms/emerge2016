@@ -16,41 +16,114 @@
 
 <p id="notice"><%= notice %></p>
 
-<center><h1>Bars in your area</h1></center>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 something">
-      <div class="firstBar"></div>
-    </div>
 
-    <div class="col-xs-6 something">
-      <div class="secondBar"></div>
-    </div>
+<div class="wrapper">
+  <!-- Simple header with fixed tabs. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">
 
-    <div class="col-xs-6 something">
-      <div class="thirdBar"></div>
-    </div>
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="fixed-header-drawer-exp">
+        </div>
 
-    <div class="col-xs-6 something">
-      <div class="fourthBar"></div>
-    </div>
 
-    <div class="col-xs-6 something">
-      <div class="fifthBar"></div>
-    </div>
 
-    <div class="col-xs-6 something">
-      <div class="sixthBar"></div>
+        </span>
+      </div>
+      <!-- Tabs -->
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+        <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Bars Near You</a>
+        <a href="#fixed-tab-2" class="mdl-layout__tab">Recent Activity</a>
+        <a href="#fixed-tab-3" class="mdl-layout__tab">Favorites</a>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
     </div>
+    <main class="mdl-layout__content">
+      <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+        <div class="page-content">
 
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-6 something">
+                  <div class="firstBar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                  </div>
+                </div>
+
+                <div class="col-xs-6 something">
+                  <div class="secondBar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                  </div>
+                </div>
+
+                <div class="col-xs-6 something">
+                  <div class="thirdBar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                  </div>
+                </div>
+
+                <div class="col-xs-6 something">
+                  <div class="fourthBar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                  </div>
+                </div>
+
+                <div class="col-xs-6 something">
+                  <div class="fifthBar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                  </div>
+                </div>
+
+                <div class="col-xs-6 something">
+                  <div class="sixthBar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                  </div>
+                </div>
+
+                <div class="col-xs-6 something">
+                  <div class="secondBar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                  </div>
+                </div>
+
+                <div class="col-xs-6 something">
+                  <div class="thirdBar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+      <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+        <div class="page-content"><!-- Your content goes here --></div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+        <div class="page-content"><!-- Your content goes here --></div>
+      </section>
+    </main>
   </div>
 </div>
 
 
+</br>
+
+            <center><p class="testfont"> load more </p></center></div>
+      </section>
 
 
-
-
+</br>
+</br>
+<div>
 <table>
   <thead>
     <tr>
@@ -68,8 +141,9 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
-<br>
+
 
 <%= link_to 'New Bar', new_bar_path %>
 

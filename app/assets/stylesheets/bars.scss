@@ -7,7 +7,30 @@
 .testfont{
   font-family: 'Gentium Book Basic', serif;
   padding-left: 20px;
+}
 
+p.testfont {
+  margin-top:15px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.mdl-layout__tab{
+  font-family:'Gentium Book Basic', serif;
+  text-transform:none;
+}
+
+h4 {
+  font-family: 'Gentium Book Basic', serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  word-spacing: 2px;
+}
+
+.glyphicon{
+  float:right !important;
+  padding-top:10px;
+  padding-right:10px;
 }
 
 .signup_box {
@@ -58,6 +81,14 @@
   background-color:#9DD8E0;
 }
 
+div>p.name{
+  height:30%;
+  width:100%;
+  background-color:black;
+  opacity:.5;
+  color:white;
+}
+
 .secondBar {
   height:150px;
   width:100%;
@@ -89,8 +120,9 @@
 }
 
 .something {
-  padding-left:0 !important;
-  padding-right:0 !important;
+  padding-left:1px !important;
+  padding-right:1px !important;
+  margin-top:2px !important;
 }
 
 
