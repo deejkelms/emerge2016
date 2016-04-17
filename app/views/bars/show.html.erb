@@ -4,10 +4,11 @@
 <% provide(:title, @bar.name) %>
 <div class = "container banner"> </div>
 
-<div class="container filler">
+<div class="container">
   <div class="row">
     <div class="col-xs-12">
       <center><h1 class = "testfont_title">
+      <%# INSERT TWITTER %>
       <%= @bar.name %>
      </h1></center>
     </div>
@@ -17,84 +18,6 @@
 
 
 
-</div>
-
-
-  <%= @bar.address %>
-  <%= @bar.email %>
-  <%= @bar.hours %>
-  <%= @bar.twitter %>
-  <ul>
-  <%@tweets.each do |tweet|%>
-    <li>  
-      <img src="<%=tweet.user.profile_image_url%>">
-      <%= tweet.text %>
-    </li>
-    
-    <%end%>
-    </ul>
-
-  
-<% if logged_in? %>
-<%=link_to 'Logout' %>
-<% end %>
-
-<% if current_bar %>  
-
-
-
-
-<!-- <p id="notice"><%= notice %></p> -->
-
-<% provide(:title, @bar.name) %>
-
-<div class="container heading">
-  <div class= "row" >
-    <div class="col-xs-4">
-      <center><h4> Address </h4></center>
-    </div>
-    <div class="col-xs-4">
-      <center><h4> Email </h4></center>
-    </div>
-    <div class="col-xs-4">
-      <center><h4> Hours </h4></center>
-    </div>
-    <div class="col-xs-4">
-      <center><%= @bar.address %></center>
-    </div>
-    <div class="col-xs-4">
-      <center><%= @bar.email %></center>
-    </div>
-    <div class="col-xs-4">
-      <center><%= @bar.hours %></center>
-    </div>
-  </div>
-</div>
-
-<!-- On rows -->
-<table class="table borderless">
-  <%@tweets.each do |tweet|%>
-<!-- On cells (`td` or `th`) -->
-<tr>
-  <th class="default"><img src="<%=tweet.user.profile_image_url%>"></th>
-  <td class="default"><p class="tweet"><%= tweet.text %></p></td>
-</tr>
-  <%end%>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-<% if current_bar %>
-
   <%= link_to 'Edit', edit_bar_path(@bar) %> |
-<% end %>
-
-<%= link_to 'Back', bars_path %>
+  <%= link_to 'Back', bars_path %>
+</div>
