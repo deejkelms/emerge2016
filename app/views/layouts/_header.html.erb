@@ -1,0 +1,10 @@
+<ul class="navbar">
+  <li><%= link_to "Home" %>
+  <li><%= link_to "About" %>
+<% if logged in %>
+  <li><%= link_to "Bars" %>
+  <li><%= link_to "Profile" %>
+  <li><%= link_to "Log Out" %>
+<% else %>
+  <li><%= link_to "Log In" %>
+</ul>
