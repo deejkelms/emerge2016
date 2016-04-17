@@ -11,15 +11,16 @@ class SessionsController < ApplicationController
    @user= User.
                  find_by(email: params[:session][:email].downcase)
                  try(:authenticate, params[:password])
-     if @user
-       session[:user_id] = @user.id
-       log_in @user
-       redirect_to @user
+     if @bar
+       session[:bar_id] = @bar.id
+       puts 'bar'
+       redirect_to current_bar
 
-     elsif @bar
-         session[:bar_id] = @bar.id
-         log_in @bar
-         redirect_to @bar
+
+     elsif @user
+         session[:user_id] = @user.id
+         puts 'user'
+         redirect_to current_user
 
      else
        flash.now[:danger] = 'Invalid email/password combination'

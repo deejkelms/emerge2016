@@ -1,3 +1,5 @@
+
+<<<<<<< HEAD
 <p id="notice"><%= notice %></p>
 
 <% provide(:title, @bar.name) %>
@@ -17,11 +19,20 @@
 <section class="main">
   <div class="container">
     <div class="row">
+<<<<<<< HEAD
       <div class="col-xs-offset-2 col-xs-8 tweet-placeholder">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
       </div>  
     </div>
   </div>  
+=======
+       <div class="col-xs-offset-2 col-xs-8 tweet-placeholder">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+        </div>   
+    </div>
+  </div>  
+</section>
+>>>>>>> master
 
 </br>
 </br>
@@ -32,3 +43,35 @@
 </div>
 
 
+=======
+
+<p id="notice"><%= notice %></p>
+
+<% provide(:title, @bar.name) %>
+<h1>
+
+  <%= @bar.name %>
+</h1>
+
+  <%= @bar.address %>
+  <%= @bar.email %>
+  <%= @bar.hours %>
+  <%= @bar.twitter %>
+  <ul>
+  <%@tweets.each do |tweet|%>
+    <li>  
+      <img src="<%=tweet.user.profile_image_url%>">
+      <%= tweet.text %>
+    </li>
+    
+    <%end%>
+    </ul>
+
+  
+  
+<% if current_bar %>  
+  <%= link_to 'Edit', edit_bar_path(@bar) %> |
+<% end %>
+
+<%= link_to 'Back', bars_path %>
+>>>>>>> 3c544b1fd476356a0d6d02163e27c7bda8e77115
