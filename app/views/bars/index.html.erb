@@ -56,7 +56,8 @@
                <% @bars.each do |bar| %>
                 <div class="col-xs-6 something">
                   <div class="firstBar">
-                    <span class="glyphicon glyphicon-option-vertical"><%= bar.name %></span>
+                    <%= link_to bar.name, bar %>
+
                   </div>
                 </div>
 
