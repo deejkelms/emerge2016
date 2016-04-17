@@ -13,24 +13,5 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
   end
+
 end
-
-
-    #Twitter ---------------------------
-    # config = {
-    #   consumer_key:    'zIiTzSNnuMFd9KJXH4fUDdYOb',
-    #   consumer_secret: 'rhATNFg3yUiC4tdmSaq0cw0bmrPp6iEbvbaELKHi6b0EeFILQg',
-    # }
-    
-    # @client= Twitter::REST::Client.new(config)
-
-    # @tweetText = []
-    # @tweetUrl = []
-    # @client.search(@bar.twitter).take(10).each do |tweet|
-    #     @tweetText << tweet.full_text 
-    #     @tweetUrl << tweet.uri.path
-    # end
-    #twitterUserFind = client.user("sssolar")
-    # End of Twitter stuff --------------------
-    
-    

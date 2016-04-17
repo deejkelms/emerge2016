@@ -1,3 +1,144 @@
 // Place all the styles related to the bars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Adamina);
+
+.testfont{
+  font-family: 'Gentium Book Basic', serif;
+<<<<<<< HEAD
+  padding-left: 20px;
+=======
+>>>>>>> master
+}
+
+p.testfont {
+  margin-top:15px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+<<<<<<< HEAD
+.mdl-layout__tab{
+  font-family:'Gentium Book Basic', serif;
+  text-transform:none;
+=======
+#navtime{
+
+>>>>>>> master
+}
+
+h4 {
+  font-family: 'Gentium Book Basic', serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  word-spacing: 2px;
+}
+
+.glyphicon{
+  float:right !important;
+  padding-top:10px;
+  padding-right:10px;
+}
+
+.signup_box {
+  background-color: #f2f2f2;
+<<<<<<< HEAD
+  padding:20px;
+=======
+  /*padding:20px;*/
+>>>>>>> master
+}
+
+.btn.btn-primary{
+  margin-top:20px;
+}
+
+.getInfo{
+  margin-right:20px;
+}
+
+
+
+/*SHOW PAGE*/
+.banner{
+ background-color:teal;
+ height:200px;
+ width:100%;
+ margin-top:-25px;
+}
+
+.testfont_title{
+  background-color:white;
+  border:3px solid #ccc;
+  padding:5px;
+  margin-top:-25px;
+  display:inline-block;
+  padding-right:10px;
+  padding-left:10px;
+}
+
+.tweet-placeholder{
+  margin-top:20px;
+  background-color:#f2f2f2;
+  padding:50px;
+}
+
+
+/* INDEX PAGE */
+
+.firstBar {
+  height:150px;
+  width:100%;
+  background-color:#9DD8E0;
+}
+
+<<<<<<< HEAD
+div>p.name{
+  height:30%;
+  width:100%;
+  background-color:black;
+  opacity:.5;
+  color:white;
+}
+=======
+
+>>>>>>> master
+
+.secondBar {
+  height:150px;
+  width:100%;
+  background-color:#FFF5B6;
+}
+
+.thirdBar {
+  height:150px;
+  width:100%;
+  background-color:#5DB2B7;
+}
+
+.fourthBar {
+  height:150px;
+  width:100%;
+  background-color:#B25C93;
+}
+
+.fifthBar {
+  height:150px;
+  width:100%;
+  background-color:#FF9DDB;
+}
+
+.sixthBar {
+  height:150px;
+  width:100%;
+  background-color:#74E0E6;
+}
+
+.something {
+  padding-left:1px !important;
+  padding-right:1px !important;
+  margin-top:2px !important;
+}
+
+
